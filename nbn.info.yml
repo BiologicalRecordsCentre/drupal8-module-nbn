@@ -1,0 +1,8 @@
+name: NBN Tools
+description: 'Provides panel panes which display content from the National Biodiversity Network Atlas web services.'
+type: module
+package: Custom
+version: '8.x-1.x'
+core: 8.x
+dependencies:
+   - block

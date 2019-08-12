@@ -1,0 +1,21 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp55\/htdocs\/drupal-dev\/sites\/all\/modules\/nbn\/sass\/nbn\.scss}line{font-family:\000036}}
+.nbn-content {
+  margin: 10px 0;
+  vertical-align: middle;
+  border-bottom: 1px solid #cccccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp55\/htdocs\/drupal-dev\/sites\/all\/modules\/nbn\/sass\/nbn\.scss}line{font-family:\0000310}}
+.nbn-content .nbn-row {
+  margin: 0;
+  padding: 5px 7px;
+  border: 1px solid #cccccc;
+  border-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp55\/htdocs\/drupal-dev\/sites\/all\/modules\/nbn\/sass\/nbn\.scss}line{font-family:\0000315}}
+.nbn-content .nbn-row.nbn-odd {
+  background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp55\/htdocs\/drupal-dev\/sites\/all\/modules\/nbn\/sass\/nbn\.scss}line{font-family:\0000318}}
+.nbn-content .nbn-row.nbn-even {
+  background-color: whitesmoke;
+}

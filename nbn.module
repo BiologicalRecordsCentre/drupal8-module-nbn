@@ -1,0 +1,40 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+
+
+function nbn_theme($existing, $type, $theme, $path) {
+   return [
+    'nbn_unformatted' => [
+      'template' => 'nbn-unformatted',
+      'variables' => [
+        'data' => null,
+        'conf' => null,
+        'wrapper_classes' => null,
+        'row_classes' => null,
+        'field_classes' => null,
+       ]
+    ],
+    'nbn_html_list' => [
+      'template' => 'nbn-html-list',
+      'variables' => [
+        'data' => null,
+        'conf' => null,
+        'wrapper_classes' => null,
+        'row_classes' => null,
+        'field_classes' => null,
+      ]
+    ],
+    'nbn_table' => [
+      'template' => 'nbn-table',
+      'variables' => [
+          'data' => null,
+          'conf' => null,
+          'wrapper_classes' => null,
+          'row_classes' => null,
+          'field_classes' => null,
+      ]
+    ],
+   ];
+}

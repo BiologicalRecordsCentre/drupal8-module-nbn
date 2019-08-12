@@ -1,0 +1,5 @@
+nbn_field:
+  version: 1.x
+  css:
+    component:
+      css/nbn.css: {}

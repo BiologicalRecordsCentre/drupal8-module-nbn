@@ -1,0 +1,45 @@
+{#
+
+/**
+ * @file
+ * Template to display an nbn response in an unformatted list.
+ *
+ * - $data : An array containing selected data from the NBN indexed by row
+ * or an error.
+ * - $wrapper_classes: Classes to apply to the container
+ * - $row_classes: An array of classes to apply to each row, indexed by row
+ * number. This matches the index in $data.
+ * - $field_classes: An array of classes to apply to each field, indexed by
+ *   field id */
+ #}
+
+
+{% if data is defined %}
+  <div {% if wrapper_classes %} class="{{ wrapper_classes }}"> {% endif %}
+  {% for key in data|keys %}
+    <div {% if row_classes[key] %} class="{{ row_classes[key] }}"> {% endif %}
+      <div {% if field_classes.name is not empty %} class="{{ field_classes.name }}"> {% endif %}
+        {% if conf.fields.name == 1 %}<p><a href="{{ conf.options.link_url }}/{{ data[key].uid }}" target="_blank" >{{ data[key].name }}</a></p> {% endif %}</div>
+        {% if conf.fields.uri == 1 %}<div>{{ data[key].uri }}</div>{% endif %}
+        {% if conf.fields.uid == 1 %}<div>{{ data[key].uid }}</div>{% endif %}
+        {% if conf.fields.id == 1 %}<div>{{ data[key].id }}</div>{% endif %}
+    </div>
+  {% endfor %}
+  </div>
+{% elseif data.error is defined %}
+  <div {% if wrapper_classes %} class="{{ wrapper_classes }}"> {% endif %}
+    <h3>
+      {{ 'There was an error communicating with the NBN Gateway.'|t }}
+    </h3>
+    <p>{{ error|t }}</p>
+  </div>
+{% else %}
+  <div {% if wrapper_classes %} class="{{ wrapper_classes }}"> {% endif %}
+    <h3>
+      {{ 'There was an error communicating with the NBN Gateway.'|t }}
+    </h3>
+      {{ 'No error message available.'|t }}
+    </p>
+  </div>
+{% endif %}
+
